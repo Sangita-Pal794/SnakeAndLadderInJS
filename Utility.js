@@ -1,5 +1,4 @@
-module.exports = {checkOption}
-var WinPos=100
+const WinPos=100
 var StartPos=0
 const MOVE_TYPE_DETAILS = {
 
@@ -24,5 +23,18 @@ function checkOption  () {
             default:
             return 0;
     }
-};
+}
+let PlayerOnePos=StartPos
+let dice1count =0
+function play() {
+while(PlayerOnePos <= WinPos)
+    {
+    PlayerOnePos = (getRandom());
+    dice1count++
+    let TempPos=(checkOption (PlayerOnePos));
+    PlayerOnePos=TempPos
+}
+} 
+
+module.exports = {play,checkOption,getRandom}
 
