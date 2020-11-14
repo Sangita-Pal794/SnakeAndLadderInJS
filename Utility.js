@@ -29,10 +29,21 @@ let dice1count =0
 function play() {
 while(PlayerOnePos <= WinPos)
     {
-    PlayerOnePos = (getRandom());
+    PlayerOnePos = getRandom()
     dice1count++
     let TempPos=(checkOption (PlayerOnePos));
     PlayerOnePos=TempPos
+    if (PlayerOnePos == WinPos){
+        console.log("Player One is currently at",WinPos,"after throwing",dice1count,"times")
+        exit
+    }
+else if (PlayerOnePos >= WinPos){
+        console.log("Player One is currently at",PlayerOnePos,"after throwing",dice1count,"times")
+        PlayerOnePos=(PlayerOnePos-Dice)
+}
+else {
+    PlayerOnePos=StartPos
+}
 }
 } 
 
