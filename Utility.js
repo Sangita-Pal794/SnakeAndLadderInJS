@@ -82,4 +82,4 @@ function Compare(PlayerOnePos,PlayerTwoPos){
     console.log("This match is draw.Play again!!")
 }
 playerone()
-module.exports = {play,checkOption,getRandom,playerone,playertwo,Compare};
+module.exports = {play,checkOption,getRandom,playerone,playertwo,Compare}
